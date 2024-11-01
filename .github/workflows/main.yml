@@ -1,20 +1,14 @@
 name: Deploy
 
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ main ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:       
+    steps:
     - name: Deploy using ssh
       uses: appleboy/ssh-action@master
       with:
@@ -30,6 +24,24 @@ jobs:
           python3 -m venv botvenv
           source botvenv/bin/activate
           python -m pip install -r requirements.txt
+          
+          # Install nvm and use it to install Node.js version 20
+          export NVM_DIR="$HOME/.nvm"
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+          if [ ! -d "$NVM_DIR" ]; then
+            echo "Installing nvm..."
+            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # Load nvm
+          fi
+          
+          echo "Installing Node.js version 20..."
+          nvm install 20
+          nvm use 20
+          
+          # Confirm Node.js and npm versions
+          node -v
+          npm -v
+
           cd /var/www/aibot/voice_synth
           npm install --only=prod
           npm run build
