@@ -8,7 +8,7 @@ import spacy
 
 
 
-GOOGLE_API_KEY = "AIzaSyAxU3V3xl5WrRoMxrrC1OcapKL1I4if7Kc" 
+GOOGLE_API_KEY = "" 
 
 
 if not GOOGLE_API_KEY:
