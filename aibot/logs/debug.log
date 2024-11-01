@@ -1659,3 +1659,4 @@ INFO 2024-11-01 17:43:44,549 basehttp "GET /api/v1/conversations/?uuid=42d68e55-
 INFO 2024-11-01 17:43:44,918 basehttp "GET /api/v1/conversations/?uuid=5359f791-46fc-4bab-a274-5636b3d0beb7 HTTP/1.1" 200 612
 INFO 2024-11-01 17:43:45,345 basehttp "GET /api/v1/conversations/?uuid=42d68e55-a068-48be-bdbd-779886c9090a HTTP/1.1" 200 642
 INFO 2024-11-01 17:43:45,855 basehttp "GET /api/v1/conversations/?uuid=5359f791-46fc-4bab-a274-5636b3d0beb7 HTTP/1.1" 200 612
+INFO 2024-11-01 19:11:33,002 autoreload C:\Users\3ples\Desktop\___AIBOT__\aibot\aibot\settings.py changed, reloading.

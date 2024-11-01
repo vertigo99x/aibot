@@ -4,11 +4,11 @@ import google.generativeai as genai
 import os
 from fastapi.middleware.cors import CORSMiddleware
 import spacy
+import dotenv()
 
 
 
-
-GOOGLE_API_KEY = "" 
+GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY') 
 
 
 if not GOOGLE_API_KEY:
