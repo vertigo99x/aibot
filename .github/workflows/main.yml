@@ -43,5 +43,16 @@ jobs:
           npm -v
 
           cd /var/www/aibot/voice_synth
-          npm install --only=prod
+          
+          # Install dependencies, including dev dependencies
+          npm install
+          
+          # Check if vite is installed
+          if ! command -v vite &> /dev/null
+          then
+              echo "vite not found, installing..."
+              npm install vite --save-dev
+          fi
+
+          # Run build
           npm run build
