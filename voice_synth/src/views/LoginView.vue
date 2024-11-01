@@ -21,7 +21,6 @@ const register = ref({
     username: '',
     password: '',
     confirm_password: '',
-    user:'',
     first_name:'',
     last_name:'',
 });
@@ -29,9 +28,7 @@ const register = ref({
 const login_error = ref(null);
 const isLoading = ref(false);
 
-const redirectBots = () => {
-    // flag IP address and redirect;
-};
+
 
 
 onMounted(() => {
@@ -106,11 +103,10 @@ async function submitRegister() {
     const username = register.value.username.trim();
     const password = register.value.password;
     const confirm_password = register.value.confirm_password;
-    const user = register.value.user;
     const first_name = register.value.first_name;
     const last_name = register.value.last_name;
 
-    if (!username || !password || !user || !confirm_password || !first_name || !last_name) {
+    if (!username || !password || !confirm_password || !first_name || !last_name) {
         toast.error('Please complete all fields', {
             autoClose: 3000,
             position: toast.POSITION.TOP_RIGHT,
@@ -137,7 +133,6 @@ async function submitRegister() {
         last_name: last_name,
         email: username,
         password: password,
-        role: user,
     };
 
     try {
@@ -160,7 +155,6 @@ async function submitRegister() {
           username: '',
           password: '',
           confirm_password: '',
-          user:'',
           first_name:'',
           last_name:'',
         }
@@ -217,7 +211,7 @@ async function submitRegister() {
                 </div>
                 <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column ms-auto me-auto ms-lg-auto me-lg-5 main-body" v-if="current_state=='login'">
                   <div class="card card-plain" id="formcard">
-                    <div class="card-header" style="background-color: var(--bs-primary);">
+                    <div class="card-header" style="background-color: #8147fc;">
                       <h4 class="font-weight-bolder text-center" style="color:#fff;">Sign In</h4>
                       <p class="mb-0"></p>
                     </div>
@@ -235,11 +229,11 @@ async function submitRegister() {
                         </div>
                         
                         <div class="text-center">
-                          <button type="button" class="btn btn-lg bg-gradient-secondary btn-lg w-100 mt-4 mb-0" @click="submitLogin()" :disabled="!login.password || !login.username">Sign In</button>
+                          <button type="button" class="btn btn-lg  btn-lg w-100 mt-4 mb-0" style="background:#8147fc;color:#fff;" @click="submitLogin()" :disabled="!login.password || !login.username">Sign In</button>
                         </div>
 
-                        <div class="text-dark mt-4">
-                          <p>New User? <span class="text-primary font-weight-bold" style="cursor:pointer;" @click="current_state='register'">Register</span></p>
+                        <div class="text-dark mt-4" >
+                          <p style="color:#ababab">New User? <span class="font-weight-bold" style="cursor:pointer;color:#8147fc;" @click="current_state='register'">Register</span></p>
                         </div>
 
                         
@@ -258,14 +252,7 @@ async function submitRegister() {
                     <div class="card-body" >
                       <form role="form" @keyup.enter="submitRegister">
                        
-                        <div class="input-group input-group-outline mb-3">
-                          
-                          <select name="" id="" class="form-control" v-model="register.user">
-                            <option value="" selected disabled>Select User Category</option>
-                            <option value="user">User</option>
-                            <option value="admin">Admin</option>
-                          </select>
-                        </div>
+                        
                         <div class="input-group input-group-outline mb-3">
                           
                           <input type="email" class="form-control" v-model="register.username" placeholder="Email Address">
@@ -285,7 +272,7 @@ async function submitRegister() {
                         </div>
                         
                         <div class="text-center">
-                          <button type="button" class="btn btn-lg bg-gradient-secondary btn-lg w-100 mt-4 mb-0" @click="submitRegister()" :disabled="!validatePassword(register.password) || register.password !== register.confirm_password || !register.first_name || !register.last_name || !register.user || !register.username">Sign Up</button>
+                          <button type="button" class="btn btn-lg bg-gradient-secondary btn-lg w-100 mt-4 mb-0" @click="submitRegister()" :disabled="!validatePassword(register.password) || register.password !== register.confirm_password || !register.first_name || !register.last_name || !register.username">Sign Up</button>
                         </div>
 
                         <div class="text-dark mt-4">
@@ -309,6 +296,8 @@ async function submitRegister() {
 </template>
 
 <style scoped lang="scss">
+@import url("../assets/material-dashboard.css");
+
 .honeypot{
     display: none;
 }
@@ -350,6 +339,7 @@ async function submitRegister() {
   .card-body{
     animation: fadein .5s ease-in-out forwards;
     opacity: 0;
+    border:1px solid #212324;
     
   }
 }
@@ -386,7 +376,16 @@ async function submitRegister() {
 }
 
 input::placeholder{
-  color:var(--bs-dark);
+  color:#ababab;
 }
+
+input{
+  color:#fff !important;
+}
+
+.page-header{
+  background:#131719;
+}
+
 
 </style>

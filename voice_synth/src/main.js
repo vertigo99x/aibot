@@ -4,7 +4,7 @@ import router from './router';
 import store from './store';
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:9080/';
+const BASE_URL = 'http://localhost:8000/';
 
 axios.defaults.baseURL = BASE_URL;
 

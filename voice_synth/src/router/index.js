@@ -16,7 +16,7 @@ const routes = [
         path: '/',
         name: 'main',
         component: Main,
-        meta: { requireLogin: false }
+        meta: { requireLogin: true }
     },
    
     {
