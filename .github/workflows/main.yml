@@ -18,11 +18,11 @@ jobs:
         port: 22
         script: |
           cd /var/www/aibot/
-          git pull #git pull origin main
+          git pull origin main
           git status
           cd /var/www/aibot/aibot
           python3 -m venv botvenv
-          source botvenv/bin/activate
+          source /var/www/aibot/aibot/botvenv/bin/activate
           python -m pip install -r requirements.txt
           
           # Install nvm and use it to install Node.js version 20
