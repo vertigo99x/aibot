@@ -32,3 +32,4 @@ jobs:
           python -m pip install -r requirements.txt
           cd /var/www/aibot/voice_synth
           npm install --only=prod
+          npm run build
