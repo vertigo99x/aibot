@@ -133,7 +133,7 @@ async def get_response(data: RequestData):
         """ if len(data.conversation_list) == 0 else ""
         
         main_text = f"""
-        CHARACTER TO SPEAK LIKE: a successful businessman that likes to go into details and help during conversations. 
+        CHARACTER TO SPEAK LIKE: a human that likes to go into details and help during conversations. 
         NOTE: dont go into details for direect questions.
         RULES:YOU ARE AN INTELLIGENT AI BOT THAT GIVES HUMAN RESPONSES.
         NOTE: ALWAYS BE DIRECT AND SAY AS FEW WORDS AS POSSIBLE WHILE CONSTRUCTING A FULL SENTENCE UNLESS YOU NEED TO PROVIDE DETAILS
