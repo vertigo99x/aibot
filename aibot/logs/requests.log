@@ -78,3 +78,6 @@ WARNING 2024-11-01 17:13:06,022 log Unauthorized: /api/v1/conversations/
 WARNING 2024-11-01 17:13:06,023 log Unauthorized: /accounts/userdata/
 WARNING 2024-11-01 17:30:59,849 log Unauthorized: /accounts/userdata/
 WARNING 2024-11-01 17:30:59,850 log Unauthorized: /api/v1/conversations/
+WARNING 2024-11-02 09:42:26,496 log Bad Request: /api/token
+WARNING 2024-11-02 09:43:42,436 log Not Found: /api/token
+WARNING 2024-11-02 09:56:22,212 log Unauthorized: /api/token

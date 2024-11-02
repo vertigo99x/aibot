@@ -1660,3 +1660,80 @@ INFO 2024-11-01 17:43:44,918 basehttp "GET /api/v1/conversations/?uuid=5359f791-
 INFO 2024-11-01 17:43:45,345 basehttp "GET /api/v1/conversations/?uuid=42d68e55-a068-48be-bdbd-779886c9090a HTTP/1.1" 200 642
 INFO 2024-11-01 17:43:45,855 basehttp "GET /api/v1/conversations/?uuid=5359f791-46fc-4bab-a274-5636b3d0beb7 HTTP/1.1" 200 612
 INFO 2024-11-01 19:11:33,002 autoreload C:\Users\3ples\Desktop\___AIBOT__\aibot\aibot\settings.py changed, reloading.
+INFO 2024-11-02 09:37:01,702 autoreload Watching for file changes with StatReloader
+INFO 2024-11-02 09:42:26,303 basehttp "OPTIONS /api/token HTTP/1.1" 200 0
+ERROR 2024-11-02 09:42:26,308 exception Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\3ples\Desktop\___AIBOT__\aibot\botvenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\3ples\Desktop\___AIBOT__\aibot\botvenv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\3ples\Desktop\___AIBOT__\aibot\botvenv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\3ples\Desktop\___AIBOT__\aibot\botvenv\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING 2024-11-02 09:42:26,497 basehttp "POST /api/token HTTP/1.1" 400 78504
+INFO 2024-11-02 09:43:12,023 autoreload C:\Users\3ples\Desktop\___AIBOT__\aibot\aibot\settings.py changed, reloading.
+INFO 2024-11-02 09:43:13,045 autoreload Watching for file changes with StatReloader
+INFO 2024-11-02 09:43:22,468 autoreload C:\Users\3ples\Desktop\___AIBOT__\aibot\aibot\settings.py changed, reloading.
+INFO 2024-11-02 09:43:23,662 autoreload Watching for file changes with StatReloader
+WARNING 2024-11-02 09:43:42,439 basehttp "POST /api/token HTTP/1.1" 404 2905
+INFO 2024-11-02 09:44:02,143 autoreload C:\Users\3ples\Desktop\___AIBOT__\aibot\aibot\urls.py changed, reloading.
+INFO 2024-11-02 09:44:03,339 autoreload Watching for file changes with StatReloader
+INFO 2024-11-02 09:44:07,905 basehttp "POST /api/token HTTP/1.1" 200 582
+INFO 2024-11-02 09:44:08,004 basehttp "OPTIONS /accounts/userdata/ HTTP/1.1" 200 0
+INFO 2024-11-02 09:44:08,021 basehttp "OPTIONS /api/v1/conversations/ HTTP/1.1" 200 0
+INFO 2024-11-02 09:44:08,023 basehttp "GET /accounts/userdata/ HTTP/1.1" 200 258
+INFO 2024-11-02 09:44:08,031 basehttp "GET /api/v1/conversations/ HTTP/1.1" 200 181
+INFO 2024-11-02 09:45:06,749 basehttp "OPTIONS /accounts/create-user/ HTTP/1.1" 200 0
+INFO 2024-11-02 09:45:07,760 basehttp "POST /accounts/create-user/ HTTP/1.1" 201 68
+INFO 2024-11-02 09:45:18,221 basehttp "POST /api/token HTTP/1.1" 200 582
+INFO 2024-11-02 09:45:18,307 basehttp "GET /accounts/userdata/ HTTP/1.1" 200 273
+INFO 2024-11-02 09:45:18,326 basehttp "GET /api/v1/conversations/ HTTP/1.1" 200 2
+INFO 2024-11-02 09:46:11,446 basehttp "GET /accounts/userdata/ HTTP/1.1" 200 273
+INFO 2024-11-02 09:46:11,449 basehttp "GET /api/v1/conversations/ HTTP/1.1" 200 2
+INFO 2024-11-02 09:46:40,861 basehttp "GET /accounts/userdata/ HTTP/1.1" 200 273
+INFO 2024-11-02 09:46:40,865 basehttp "GET /api/v1/conversations/ HTTP/1.1" 200 2
+INFO 2024-11-02 09:47:52,006 basehttp "GET /accounts/userdata/ HTTP/1.1" 200 273
+INFO 2024-11-02 09:47:52,009 basehttp "GET /api/v1/conversations/ HTTP/1.1" 200 2
+INFO 2024-11-02 09:49:14,870 basehttp "POST /api/token HTTP/1.1" 200 582
+INFO 2024-11-02 09:49:14,984 basehttp "GET /accounts/userdata/ HTTP/1.1" 200 258
+INFO 2024-11-02 09:49:15,015 basehttp "GET /api/v1/conversations/ HTTP/1.1" 200 181
+INFO 2024-11-02 09:49:23,180 basehttp "POST /api/v1/conversations/ HTTP/1.1" 201 393
+INFO 2024-11-02 09:49:39,250 basehttp "PUT /api/v1/conversations/ HTTP/1.1" 200 700
+INFO 2024-11-02 09:49:44,948 basehttp "PUT /api/v1/conversations/ HTTP/1.1" 200 1120
+INFO 2024-11-02 09:49:51,923 basehttp "PUT /api/v1/conversations/ HTTP/1.1" 200 1699
+INFO 2024-11-02 09:51:12,402 basehttp "PUT /api/v1/conversations/ HTTP/1.1" 200 2436
+INFO 2024-11-02 09:54:20,634 basehttp "PUT /api/v1/conversations/ HTTP/1.1" 200 3311
+INFO 2024-11-02 09:55:07,693 basehttp "POST /accounts/create-user/ HTTP/1.1" 201 68
+INFO 2024-11-02 09:55:20,096 basehttp "POST /api/token HTTP/1.1" 200 582
+INFO 2024-11-02 09:55:20,199 basehttp "GET /accounts/userdata/ HTTP/1.1" 200 280
+INFO 2024-11-02 09:55:20,212 basehttp "GET /api/v1/conversations/ HTTP/1.1" 200 2
+INFO 2024-11-02 09:55:23,324 basehttp "GET /accounts/userdata/ HTTP/1.1" 200 280
+INFO 2024-11-02 09:55:23,327 basehttp "GET /api/v1/conversations/ HTTP/1.1" 200 2
+INFO 2024-11-02 09:56:09,371 basehttp "POST /accounts/create-user/ HTTP/1.1" 201 68
+WARNING 2024-11-02 09:56:22,214 basehttp "POST /api/token HTTP/1.1" 401 63
+INFO 2024-11-02 09:56:27,733 basehttp "POST /api/token HTTP/1.1" 200 582
+INFO 2024-11-02 09:56:27,804 basehttp "GET /accounts/userdata/ HTTP/1.1" 200 273
+INFO 2024-11-02 09:56:27,832 basehttp "GET /api/v1/conversations/ HTTP/1.1" 200 2
+INFO 2024-11-02 09:57:15,567 basehttp "GET /accounts/userdata/ HTTP/1.1" 200 273
+INFO 2024-11-02 09:57:15,569 basehttp "GET /api/v1/conversations/ HTTP/1.1" 200 2
+INFO 2024-11-02 09:57:45,387 basehttp "POST /api/v1/conversations/ HTTP/1.1" 201 337
+INFO 2024-11-02 09:57:56,386 basehttp "PUT /api/v1/conversations/ HTTP/1.1" 200 712
+INFO 2024-11-02 09:58:10,814 basehttp "GET /accounts/userdata/ HTTP/1.1" 200 273
+INFO 2024-11-02 09:58:10,820 basehttp "GET /api/v1/conversations/ HTTP/1.1" 200 85
+INFO 2024-11-02 09:58:28,348 basehttp "POST /api/v1/conversations/ HTTP/1.1" 201 374
+INFO 2024-11-02 09:58:38,983 basehttp "GET /accounts/userdata/ HTTP/1.1" 200 273
+INFO 2024-11-02 09:58:38,985 basehttp "GET /api/v1/conversations/ HTTP/1.1" 200 180
+INFO 2024-11-02 09:59:04,521 basehttp "OPTIONS /api/v1/conversations/?uuid=56e73788-8925-45a5-81cb-eb199b27573b HTTP/1.1" 200 0
+INFO 2024-11-02 09:59:04,533 basehttp "GET /api/v1/conversations/?uuid=56e73788-8925-45a5-81cb-eb199b27573b HTTP/1.1" 200 712
+INFO 2024-11-02 09:59:07,830 basehttp "OPTIONS /api/v1/conversations/?uuid=d48681bd-e59c-4606-8c71-0c152610d65b HTTP/1.1" 200 0
+INFO 2024-11-02 09:59:07,843 basehttp "GET /api/v1/conversations/?uuid=d48681bd-e59c-4606-8c71-0c152610d65b HTTP/1.1" 200 374
+INFO 2024-11-02 09:59:09,144 basehttp "GET /api/v1/conversations/?uuid=56e73788-8925-45a5-81cb-eb199b27573b HTTP/1.1" 200 712
+INFO 2024-11-02 10:00:11,372 basehttp "PUT /api/v1/conversations/ HTTP/1.1" 200 1356
+INFO 2024-11-02 10:12:13,386 autoreload C:\Users\3ples\Desktop\___AIBOT__\aibot\aibot\urls.py changed, reloading.
+INFO 2024-11-02 10:12:13,964 autoreload Watching for file changes with StatReloader
