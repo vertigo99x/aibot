@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["165.154.252.219"]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -47,7 +47,7 @@ SIMPLE_JWT = {
 }
 
 
-HOST = 'http://localhost:8000'
+HOST = 'http://165.154.252.219/backend/'
 # Application definition
 
 INSTALLED_APPS = [
@@ -96,7 +96,7 @@ WSGI_APPLICATION = 'aibot.wsgi.application'
 
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = [
-   "http://127.0.0.1"
+   "http://165.154.252.219"
 ]
 
 

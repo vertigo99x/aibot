@@ -85,7 +85,8 @@ faq = {
 
 app = FastAPI()
 origins = [
-    "http://localhost:5174",
+    "http://165.154.252.219",
+    "http://localhost",
     
 ]
 

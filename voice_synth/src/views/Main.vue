@@ -216,7 +216,7 @@ const rate = ref(store.getters.settings.rate);
 const continueVoice = ref(store.getters.settings.continueVoice); 
 const conversation_uuid = ref(store.getters.conversation_uuid);
 
-const CUSTOM_API = "http://localhost:9080/"
+const CUSTOM_API = "http://165.154.252.219/service/"
 
 
 watch(() => store.getters.conversation_uuid, (newVal) => {
