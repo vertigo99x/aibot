@@ -2,10 +2,10 @@
     <main>
       
         <div class="sidebar" :class="{'closed':!isSidebarOpen}">
-            <div class="menu" v-if="!isBig">
+            <div class="menu" v-if="!isBig()">
                 <button @click="isSidebarOpen = !isSidebarOpen" :class="{'rotatemenu':!isSidebarOpen}"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="24px" fill="#F44335"><path d="M360-120v-720h80v720h-80Zm160-160v-400l200 200-200 200Z"/></svg></button>
                 </div>
-          <div class="top-section" v-if="isBig || (!isBig && isSidebarOpen)" >
+          <div class="top-section" v-if="isBig() || (!isBig() && isSidebarOpen)" >
             
             <button style="padding:.5rem" @click="createNewConversation()"><span >New Conversation</span>
               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg></button>
@@ -38,7 +38,7 @@
           </div>
         </div>
         <div class="--dark-theme" id="chat">
-            <div class="menu" v-if="!isBig">
+            <div class="menu" v-if="!isBig()">
                 <button @click="isSidebarOpen = !isSidebarOpen" :class="{'rotatemenu':!isSidebarOpen}"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="24px" fill="#F44335"><path d="M360-120v-720h80v720h-80Zm160-160v-400l200 200-200 200Z"/></svg></button>
               </div>
           <div class="chat__conversation-board" ref="conversationBoard">
