@@ -87,6 +87,7 @@ app = FastAPI()
 origins = [
     "http://165.154.252.219",
     "http://localhost",
+    "https://voicesynth.vercel.app",
     
 ]
 
