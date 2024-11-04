@@ -104,9 +104,17 @@ app.add_middleware(
 class RequestData(BaseModel):
     text: str
     conversation_list: list
+    custom_prompt: str
 
 @app.post("/api/v1/getResponse", status_code=status.HTTP_200_OK)
 async def get_response(data: RequestData):
+    
+    if data.custom_prompt:
+        response = model.generate_content(data.custom_prompt)
+        message = response.candidates[0].content.parts[0].text
+        return {"response": message}
+
+        
     main_text = data.text.strip()
     if not main_text:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Text is required")
