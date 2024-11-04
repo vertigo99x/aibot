@@ -493,7 +493,8 @@ const sendTextToApi = async (text) => {
   try {
     const data = {
       text:text,
-      conversation_list:conversation_uuid.value ? conversation.value : []
+      conversation_list:conversation_uuid.value ? conversation.value : [],
+      custom_prompt:"",
     }
 
     const response = await $http.post(CUSTOM_API + 'api/v1/getResponse', data);
